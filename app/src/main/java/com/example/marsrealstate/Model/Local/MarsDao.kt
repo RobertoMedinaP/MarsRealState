@@ -21,7 +21,7 @@ interface MarsDao {
     suspend fun insertAllMars(mars: List<MarsRealState>)
 
     @Update
-    suspend fun updateMArs(mars: MarsRealState)
+    suspend fun updateMars(mars: MarsRealState)
 
     @Delete
     suspend fun deleteMars(mars: MarsRealState)
@@ -33,14 +33,14 @@ interface MarsDao {
     fun getAllMars(): LiveData<List<MarsRealState>>
 
     //funcion para traer por tipo
-    @Query("SELECT * FROM mars_table WHERE type=type LIMIT 1")
+  /*  @Query("SELECT * FROM mars_table WHERE type=type LIMIT 1")
     //recibimos un tipo que es string y la respuesta será un terreno envuelto en Livedata
     fun getMarsByType(type: String): LiveData<MarsRealState>
 
     @Query("SELECT * FROM mars_table WHERE id=id")
     //recibimos un tipo que es string y la respuesta será un terreno envuelto en Livedata
     fun getMarsById(id: String): LiveData<MarsRealState>
-
+*/
     
 
 }

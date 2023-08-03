@@ -22,4 +22,7 @@ interface MarsApi {
     @GET("realstate")
     //imagino que esta obtiene respuesta cuando despierta
     suspend fun fetchMarsDataCoroutine(): Response<List<MarsRealState>>
+
+    /** entonces: Call sin coroutine y response con coroutine(suspen fun)
+     */
 }

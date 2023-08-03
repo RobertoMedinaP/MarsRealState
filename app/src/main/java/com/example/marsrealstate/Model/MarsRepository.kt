@@ -94,13 +94,11 @@ class MarsRepository(private val marsDao: MarsDao) {
     }
 
     //finalmente llamamos todas las funciones del dao
-    /*fun getTerrainById(id: String): LiveData<MarsRealState>{
-        return marsDao.getMarsById(id)
-    }*/
 
-    fun getTerrainByid(id: String): LiveData<MarsRealState>{
+
+    /*fun getTerrainByid(id: String): LiveData<MarsRealState>{
         return getTerrainByid(id)
-    }
+    }*///Esta funcion no está en el dao,
 
     //funcion para traer todos los terrenos
     val listAllMars: LiveData<List<MarsRealState>> = marsDao.getAllMars()
@@ -110,7 +108,7 @@ class MarsRepository(private val marsDao: MarsDao) {
     }
 
     suspend fun updateMars(mars: MarsRealState){
-        marsDao.updateMArs(mars)
+        marsDao.updateMars(mars)
     }
 
     suspend fun deleteMars(mars: MarsRealState){
@@ -121,11 +119,11 @@ class MarsRepository(private val marsDao: MarsDao) {
         marsDao.deleteAllMars()
     }
 
-    fun getMarsByType(type: String): LiveData<MarsRealState>{
+   /* fun getMarsByType(type: String): LiveData<MarsRealState>{
         return marsDao.getMarsByType(type)
     }
 
     fun getMarsById(id: String): LiveData<MarsRealState>{
         return marsDao.getMarsById(id)
-    }
+    }*/
 }
